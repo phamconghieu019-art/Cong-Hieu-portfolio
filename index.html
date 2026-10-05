@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hiếu Phạm Công</title>
+<meta name="description" content="Portfolio of Hiếu Phạm Công, International Economics student at Foreign Trade University.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap">
+<style>
+/* Layout: sticky bar with progress; bilingual parallel-text hero; a timeline of the years on the CV; sheet-style sections (sticky title left, content right); a working PathWise scoring demo as the project. */
+:root{
+  color-scheme:light;
+  --paper:#EDEEF2;
+  --panel:#E1E5F1;
+  --ink:#1D2B4F;
+  --slate:#4F5A7E;
+  --rule:#C7CCDC;
+  --stamp:#B93A22;
+  --ok:#2A6A52;
+  --bar-work:#B93A22;
+  --bar-act:#4F5A7E;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1120px;
+  --gutter:clamp(18px,5vw,48px);
+  --blend:multiply;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#0F1528; --panel:#18213D; --ink:#E7EAF6; --slate:#A4ADCB; --rule:#2B3659;
+    --stamp:#FF8F70; --ok:#6FCFA4; --bar-work:#FF8F70; --bar-act:#7C88B0; --blend:normal;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#0F1528; --panel:#18213D; --ink:#E7EAF6; --slate:#A4ADCB; --rule:#2B3659;
+  --stamp:#FF8F70; --ok:#6FCFA4; --bar-work:#FF8F70; --bar-act:#7C88B0; --blend:normal;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:.2em;text-decoration-thickness:1px;transition:color .2s,text-decoration-color .2s}
+a:hover{color:var(--stamp);text-decoration-color:var(--stamp)}
+:focus-visible{outline:2px solid var(--stamp);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:30}
+.skip:focus{left:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+
+/* language: English by default, even before the script runs */
+html:not([data-lang="vi"]) .vi,html[data-lang="vi"] .en{display:none}
+.gloss .en,.gloss .vi{display:none}
+html:not([data-lang="vi"]) .gloss .vi{display:inline}
+html[data-lang="vi"] .gloss .en{display:inline}
+.swap main{animation:swap .28s ease-out}
+@keyframes swap{from{opacity:.3}to{opacity:1}}
+
+/* ---- sticky bar ---- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:12px}
+.bar nav{display:flex;gap:clamp(14px,2.4vw,30px);font-size:15px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.bar nav a:hover{color:var(--ink);border-bottom-color:var(--rule)}
+.bar nav a[aria-current="true"]{border-bottom-color:var(--stamp)}
+.progress{height:2px;background:var(--stamp);transform:scaleX(var(--p,0));transform-origin:left}
+.lang{display:flex;flex:none;border:1px solid var(--rule);border-radius:999px;padding:3px}
+.lang button{font:500 14px/1 var(--sans);border:0;background:transparent;color:var(--slate);padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.lang button:not([aria-pressed="true"]):hover{color:var(--stamp)}
+
+/* ---- hero ---- */
+.hero{padding-top:clamp(28px,6vw,72px);padding-bottom:clamp(48px,8vw,96px)}
+.hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,56px);align-items:end}
+h1{font:300 clamp(46px,10.4vw,140px)/1.04 var(--serif);font-optical-sizing:auto;letter-spacing:-.02em;margin:0;padding-top:.08em}
+.portrait{width:clamp(96px,15vw,184px);aspect-ratio:1;object-fit:cover;object-position:50% 22%;mix-blend-mode:var(--blend);border-radius:6px;margin-bottom:.6em}
+.role{margin:clamp(18px,3vw,28px) 0 0;display:flex;flex-wrap:wrap;gap:6px clamp(16px,3vw,36px);color:var(--slate)}
+.role strong{color:var(--ink);font-weight:500}
+.parallel{margin-top:clamp(40px,7vw,88px)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
+.pair:last-child{border-bottom:1px solid var(--rule)}
+.pair p{margin:0;padding:clamp(16px,2.4vw,26px) 0;font:400 clamp(19px,2.35vw,30px)/1.3 var(--serif);max-width:26ch}
+.pair p+p{border-left:1px solid var(--rule);padding-left:clamp(18px,4vw,56px);position:relative}
+.pair:first-child p+p::before{content:"";position:absolute;left:-1px;top:0;width:3px;height:44px;background:var(--stamp)}
+.pair p:first-child{padding-right:clamp(12px,3vw,40px)}
+
+/* ---- sections ---- */
+.sec{border-top:1px solid var(--rule);padding-block:clamp(48px,8vw,104px);scroll-margin-top:56px}
+.sec>.wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(24px,5vw,72px)}
+.sec>.wrap>*{min-width:0}
+.sec-head h2{font:400 clamp(30px,3.6vw,44px)/1.1 var(--serif);margin:0;letter-spacing:-.01em;text-wrap:balance}
+.gloss{display:block;margin-top:6px;font:italic 400 18px/1.3 var(--serif);color:var(--slate)}
+@media(min-width:900px){.sec-head{position:sticky;top:84px;align-self:start}}
+.lede{margin:0 0 28px;max-width:56ch}
+
+.group+.group{margin-top:clamp(36px,5vw,56px)}
+.group>h3{font:500 15px/1.4 var(--sans);color:var(--slate);margin:0 0 4px}
+.entry{display:grid;grid-template-columns:minmax(96px,150px) minmax(0,1fr);gap:8px clamp(16px,3vw,32px);padding-block:22px;border-top:1px solid var(--rule)}
+.group>h3+.entry,.entries>.entry:first-child{border-top:1px solid var(--ink)}
+.years{font-variant-numeric:tabular-nums;color:var(--slate);font-size:15px;padding-top:.2em}
+.entry h4{font:400 clamp(21px,2.2vw,26px)/1.25 var(--serif);margin:0}
+.entry .what{margin:2px 0 0;color:var(--slate)}
+.entry p.note{margin:10px 0 0;max-width:60ch}
+
+/* ---- timeline ---- */
+.tl-scroll{overflow-x:auto;max-width:100%;padding-bottom:6px}
+.tl{min-width:680px;position:relative}
+.tl-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr))}
+.tl-axis span{font-size:13px;color:var(--slate);border-left:1px solid var(--rule);padding:0 0 8px 8px;font-variant-numeric:tabular-nums}
+.tl-row{padding-top:14px}
+.tl-lab{margin:0 0 6px;font-size:15px}
+.tl-lab strong{font-weight:500}
+.tl-lab span{color:var(--slate)}
+.track{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));background:repeating-linear-gradient(to right,var(--rule) 0 1px,transparent 1px 12.5%);min-height:30px}
+.track i{grid-row:1;height:30px;border-radius:3px;background:var(--ink)}
+.track i.work{background:var(--bar-work)}
+.track i.act{background:var(--bar-act)}
+.marks{padding-top:18px}
+.marks .track{min-height:0;align-items:start}
+.marks .track div{grid-row:1;font-size:13px;line-height:1.35;color:var(--ink);padding:10px 8px 0;border-left:1px solid var(--rule);position:relative}
+.marks .track div::before{content:"";position:absolute;left:-5px;top:0;width:9px;height:9px;border-radius:50%;background:var(--stamp)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:14px;color:var(--slate)}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend i{width:14px;height:14px;border-radius:3px;background:var(--ink)}
+.legend i.work{background:var(--bar-work)}.legend i.act{background:var(--bar-act)}
+.now{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--stamp);pointer-events:none}
+.now span{position:absolute;top:-2px;left:6px;font-size:12px;color:var(--stamp);background:var(--paper);padding:0 4px;white-space:nowrap}
+
+/* ---- project ---- */
+.project{background:var(--panel);border-radius:8px;padding:clamp(20px,4vw,44px);min-width:0}
+.project h3{font:400 clamp(28px,3.4vw,40px)/1.1 var(--serif);margin:0}
+.project .sub{margin:6px 0 0;color:var(--slate)}
+.project p{max-width:62ch}
+.stack{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--slate);font-size:15px;padding:0;list-style:none}
+
+/* ---- scoring demo ---- */
+.demo{margin-top:clamp(28px,4vw,44px);padding-top:clamp(22px,3vw,32px);border-top:1px solid var(--ink)}
+.demo h4{font:400 clamp(22px,2.4vw,28px)/1.2 var(--serif);margin:0}
+.demo .cap{margin:6px 0 0;color:var(--slate);max-width:60ch}
+.demo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(22px,4vw,48px);margin-top:24px}
+.skill{border:0;border-top:1px solid var(--rule);margin:0;padding:12px 0 14px;min-width:0}
+.skill legend{float:left;width:100%;padding:0;font-weight:500}
+.skill .need{clear:both;display:block;color:var(--slate);font-size:13px;margin-top:0}
+.seg{display:flex;gap:6px;margin-top:10px}
+.seg label{position:relative;flex:1;max-width:56px}
+.seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;height:38px;border:1px solid var(--rule);border-radius:6px;font-variant-numeric:tabular-nums;background:var(--paper);color:var(--slate);transition:background .15s,color .15s,border-color .15s;position:relative}
+.seg label:hover span{border-color:var(--ink);color:var(--ink)}
+.seg input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.seg input:focus-visible+span{outline:2px solid var(--stamp);outline-offset:2px}
+.seg label.req span::after{content:"";position:absolute;bottom:4px;width:5px;height:5px;border-radius:50%;background:var(--stamp)}
+.reset{margin-top:14px;font:500 14px/1 var(--sans);border:1px solid var(--ink);background:transparent;color:var(--ink);padding:10px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.reset:hover{background:var(--ink);color:var(--paper)}
+.out{min-width:0}
+.k{margin:0;font-size:14px;color:var(--slate)}
+.big{margin:2px 0 0;font:300 clamp(40px,5vw,60px)/1.05 var(--serif);font-variant-numeric:tabular-nums}
+.meter{height:6px;border-radius:3px;background:var(--rule);margin-top:10px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ink);transition:width .35s ease}
+.hint{margin:8px 0 0;font-size:14px;color:var(--slate)}
+.next{margin-top:26px;padding-top:20px;border-top:1px solid var(--rule)}
+.next .big{color:var(--stamp)}
+.next .why{margin:6px 0 0;max-width:52ch}
+.rank{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--ink)}
+.rank li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:center}
+.rank .nm{font-weight:500}
+.rank .sc{font-variant-numeric:tabular-nums;color:var(--slate)}
+.rank .tag{grid-column:1/-1;font-size:13px;color:var(--slate)}
+.rank .tag.go{color:var(--stamp);font-weight:500}
+.rank .tag.ok{color:var(--ok)}
+.rank .pb{grid-column:1/-1;height:4px;border-radius:2px;background:var(--rule);overflow:hidden}
+.rank .pb i{display:block;height:100%;background:var(--slate);transition:width .35s ease}
+.rank li.first .pb i{background:var(--stamp)}
+.rank li.done{opacity:.75}
+.formula{margin:22px 0 0;font-size:14px;color:var(--slate);max-width:60ch}
+
+/* ---- skills ---- */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,48px)}
+.skills h3{font:400 24px/1.2 var(--serif);margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.skills ul{list-style:none;margin:0;padding:0}
+.skills li{padding:9px 0;border-bottom:1px solid var(--rule)}
+.skills li small{display:block;color:var(--slate);font-size:14px;line-height:1.4}
+
+/* ---- contact ---- */
+.mail{display:inline-block;font:300 clamp(24px,5vw,56px)/1.15 var(--serif);text-decoration-thickness:2px;overflow-wrap:anywhere}
+.contact p{margin:0 0 18px;max-width:46ch}
+.contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:18px}
+.copy{font:500 14px/1 var(--sans);border:1px solid var(--ink);background:transparent;color:var(--ink);padding:11px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.copy:hover{background:var(--ink);color:var(--paper)}
+.copy .ok{display:none}.copy.is-done .ok{display:inline}.copy.is-done .lab{display:none}
+footer{border-top:1px solid var(--rule);padding-block:28px;color:var(--slate);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ---- the one orchestrated moment: the hero text is typeset line by line ---- */
+@media (prefers-reduced-motion:no-preference){
+  .pair{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .pair:nth-child(2){animation-delay:.14s}
+  .pair:nth-child(3){animation-delay:.28s}
+  .pair p+p::before{transform-origin:top;animation:tick .6s .55s cubic-bezier(.2,.7,.2,1) both}
+}
+@keyframes rise{from{opacity:.35;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes tick{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.swap main{animation:none}.meter i,.rank .pb i{transition:none}}
+
+/* ---- small screens ---- */
+@media(max-width:899px){
+  .sec>.wrap{grid-template-columns:minmax(0,1fr)}
+  .skills{grid-template-columns:1fr}
+  .demo-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .hero-top{grid-template-columns:1fr}
+  .portrait{order:-1;margin:0}
+  .pair{grid-template-columns:1fr}
+  .pair p{max-width:none;padding-right:0!important}
+  .pair p+p{border-left:0;padding-left:0;padding-top:0;color:var(--slate)}
+  .pair p+p::before{display:none}
+  .pair:first-child{border-top:3px solid var(--stamp)}
+  .entry{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body id="top-of-page">
+
+<a class="skip" href="#main"><span class="en">Skip to content</span><span class="vi">Đến nội dung chính</span></a>
+
+<header class="bar">
+  <div class="wrap">
+    <nav aria-label="Sections">
+      <a href="#path"><span class="en">Path</span><span class="vi">Hành trình</span></a>
+      <a href="#education"><span class="en">Education</span><span class="vi">Học vấn</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></a>
+      <a href="#project"><span class="en">Project</span><span class="vi">Dự án</span></a>
+      <a href="#skills"><span class="en">Skills</span><span class="vi">Kỹ năng</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Ngôn ngữ">
+      <button type="button" data-set="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-set="vi" aria-pressed="false" lang="vi">VI</button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap" aria-labelledby="name">
+    <div class="hero-top">
+      <h1 id="name">Hiếu Phạm Công</h1>
+      <img class="portrait" src="assets/hieu.jpg" width="184" height="184" alt="Portrait of Hiếu Phạm Công">
+    </div>
+    <p class="role">
+      <strong><span class="en">International Economics, Foreign Trade University (FTU)</span><span class="vi">Kinh tế Quốc tế, Đại học Ngoại thương (FTU)</span></strong>
+      <span>IELTS 7.5</span>
+      <span><span class="en">Hà Nội, Vietnam</span><span class="vi">Hà Nội, Việt Nam</span></span>
+      <!-- Confirm before publishing: remove this line if you are not looking for an internship. -->
+      <span><span class="en">Looking for an internship</span><span class="vi">Đang tìm vị trí thực tập</span></span>
+    </p>
+    <!-- Parallel text: both languages stay visible here, like an interpreter's aligned transcript. -->
+    <div class="parallel">
+      <div class="pair">
+        <p lang="en">Build a base of soft skills.</p>
+        <p lang="vi">Xây dựng nền tảng kĩ năng mềm.</p>
+      </div>
+      <div class="pair">
+        <p lang="en">Get good with the tools of my field: SQL, Power BI and more.</p>
+        <p lang="vi">Thành thạo các công cụ liên quan đến ngành học (SQL, Power BI, ...).</p>
+      </div>
+      <div class="pair">
+        <p lang="en">Understand the work and what it asks of me.</p>
+        <p lang="vi">Nắm vững nghiệp vụ, tính chất công việc.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PATH (timeline) ============ -->
+  <section class="sec" id="path" aria-labelledby="h-path">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-path"><span class="en">Path so far</span><span class="vi">Hành trình</span></h2><span class="gloss"><span class="en">Path so far</span><span class="vi">Hành trình</span></span></div>
+      <div>
+        <p class="lede"><span class="en">Every bar covers the years listed on my CV, from the first year to the last.</span><span class="vi">Mỗi thanh trải dài theo các năm ghi trong CV, từ năm đầu đến năm cuối.</span></p>
+        <div class="tl-scroll" tabindex="0" role="region" aria-label="Timeline 2020 to 2027">
+          <div class="tl" id="tl">
+            <div class="tl-grid tl-axis" aria-hidden="true"><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span><span>2027</span></div>
+            <div class="tl-row">
+              <p class="tl-lab"><strong><span class="en">Thái Bình High School for the Gifted</span><span class="vi">THPT Chuyên Thái Bình</span></strong> <span><span class="en">English major, 2020–2023</span><span class="vi">Chuyên Anh, 2020–2023</span></span></p>
+              <div class="track"><i style="grid-column:1 / span 4"></i></div>
+            </div>
+            <div class="tl-row">
+              <p class="tl-lab"><strong><span class="en">Foreign Trade University</span><span class="vi">Đại học Ngoại thương</span></strong> <span><span class="en">International Economics, 2023–2027</span><span class="vi">Kinh tế Quốc tế, 2023–2027</span></span></p>
+              <div class="track"><i style="grid-column:4 / span 5"></i></div>
+            </div>
+            <div class="tl-row">
+              <p class="tl-lab"><strong><span class="en">Revolutionary Songs Propaganda Club</span><span class="vi">CLB Tuyên truyền ca khúc Cách Mạng</span></strong> <span><span class="en">Member, 2023–2024</span><span class="vi">Thành viên, 2023–2024</span></span></p>
+              <div class="track"><i class="act" style="grid-column:4 / span 2"></i></div>
+            </div>
+            <div class="tl-row">
+              <p class="tl-lab"><strong><span class="en">Thái Bình City People's Court</span><span class="vi">Tòa án Nhân dân Thành phố Thái Bình</span></strong> <span><span class="en">Secretary intern, 2025</span><span class="vi">Thực tập thư ký, 2025</span></span></p>
+              <div class="track"><i class="work" style="grid-column:6 / span 1"></i></div>
+            </div>
+            <div class="marks">
+              <div class="track">
+                <div style="grid-column:1"><span class="en">Provincial first prize</span><span class="vi">Giải nhất cấp tỉnh</span></div>
+                <div style="grid-column:2"><span class="en">City excellent student</span><span class="vi">HSG cấp thành phố</span></div>
+                <div style="grid-column:3"><span class="en">City excellent student, IELTS 7.5</span><span class="vi">HSG cấp thành phố, IELTS 7.5</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="legend" aria-label="Legend">
+          <li><i></i><span class="en">Education</span><span class="vi">Học vấn</span></li>
+          <li><i class="act"></i><span class="en">Activities</span><span class="vi">Hoạt động</span></li>
+          <li><i class="work"></i><span class="en">Work</span><span class="vi">Công việc</span></li>
+          <li><i style="border-radius:50%;background:var(--stamp);width:10px;height:10px"></i><span class="en">Award or certificate</span><span class="vi">Giải thưởng hoặc chứng chỉ</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="sec" id="education" aria-labelledby="h-edu">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-edu"><span class="en">Education</span><span class="vi">Học vấn</span></h2><span class="gloss"><span class="en">Education</span><span class="vi">Học vấn</span></span></div>
+      <div class="entries">
+        <div class="entry">
+          <div class="years">2023 – 2027</div>
+          <div>
+            <h4><span class="en">Foreign Trade University (FTU)</span><span class="vi">Đại học Ngoại thương (FTU)</span></h4>
+            <p class="what"><span class="en">International Economics, High-Quality Program</span><span class="vi">Kinh tế Quốc tế, Chương trình chất lượng cao</span></p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="years">2020 – 2023</div>
+          <div>
+            <h4><span class="en">Thái Bình High School for the Gifted</span><span class="vi">Trường THPT Chuyên Thái Bình</span></h4>
+            <p class="what"><span class="en">English major</span><span class="vi">Chuyên Anh</span></p>
+            <p class="note"><span class="en">City-level excellent student award, 2021 and 2022.</span><span class="vi">Học sinh giỏi cấp thành phố năm 2021, 2022.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="sec" id="experience" aria-labelledby="h-exp">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-exp"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></h2><span class="gloss"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></span></div>
+      <div>
+        <div class="group">
+          <h3><span class="en">Work</span><span class="vi">Công việc</span></h3>
+          <div class="entry">
+            <div class="years">2025</div>
+            <div>
+              <h4><span class="en">Thái Bình City People's Court</span><span class="vi">Tòa án Nhân dân Thành phố Thái Bình</span></h4>
+              <p class="what"><span class="en">Secretary intern</span><span class="vi">Thực tập thư ký</span></p>
+              <p class="note"><span class="en">Also interpreted for a civil judgment enforcement agency.</span><span class="vi">Ngoài ra: từng phiên dịch cho cơ quan thi hành án.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h3><span class="en">Activities</span><span class="vi">Hoạt động</span></h3>
+          <div class="entry">
+            <div class="years">2023 – 2024</div>
+            <div>
+              <h4><span class="en">Revolutionary Songs Propaganda Club</span><span class="vi">CLB Tuyên truyền ca khúc Cách Mạng</span></h4>
+              <p class="what"><span class="en">Member</span><span class="vi">Thành viên</span></p>
+              <p class="note"><span class="en">Took part in and organized music events for the university and for the city of Hà Nội.</span><span class="vi">Tham gia và tổ chức các sự kiện âm nhạc của trường cũng như của Thành phố Hà Nội.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT ============ -->
+  <section class="sec" id="project" aria-labelledby="h-proj">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-proj"><span class="en">Project</span><span class="vi">Dự án</span></h2><span class="gloss"><span class="en">Project</span><span class="vi">Dự án</span></span></div>
+      <article class="project">
+        <h3>PathWise</h3>
+        <p class="sub"><span class="en">A career skill-gap platform for university students. Team project.</span><span class="vi">Nền tảng phân tích khoảng cách kỹ năng nghề nghiệp cho sinh viên. Dự án nhóm.</span></p>
+        <p><span class="en">PathWise compares a student's current skills with the skills a target career needs, then ranks what to learn next with a Skill Priority Score. The score combines the size of the gap, the skill's importance to the career, market demand, and how many other skills depend on it, so every recommendation can be explained.</span><span class="vi">PathWise so sánh kỹ năng hiện tại của sinh viên với kỹ năng mà nghề mục tiêu yêu cầu, rồi xếp hạng kỹ năng nên học tiếp bằng điểm ưu tiên kỹ năng. Điểm này kết hợp mức độ thiếu hụt, tầm quan trọng của kỹ năng với nghề, nhu cầu thị trường và số kỹ năng phụ thuộc vào nó, nên mỗi gợi ý đều giải thích được.</span></p>
+        <ul class="stack" aria-label="Built with">
+          <li>Python (Flask)</li><li>HTML, CSS, JavaScript</li><li>CSV data</li><li>Pytest</li>
+        </ul>
+        <!-- TODO: add the live site and GitHub links here, e.g. <a href="https://...">GitHub</a> -->
+
+        <div class="demo">
+          <h4><span class="en">Try the scoring</span><span class="vi">Thử tính điểm</span></h4>
+          <p class="cap"><span class="en">Example data for a Business Analyst target. Set your level for each skill and watch the recommendation move. The dot marks the level the career needs.</span><span class="vi">Dữ liệu mẫu cho mục tiêu Business Analyst. Chọn mức hiện tại cho từng kỹ năng và xem gợi ý thay đổi. Chấm tròn đánh dấu mức mà nghề yêu cầu.</span></p>
+          <div class="demo-grid">
+            <div>
+              <div id="skill-inputs"></div>
+              <button class="reset" type="button" id="reset-demo"><span class="en">Reset example</span><span class="vi">Về dữ liệu mẫu</span></button>
+            </div>
+            <div class="out" aria-live="polite">
+              <div>
+                <p class="k"><span class="en">Career Fit</span><span class="vi">Độ phù hợp nghề</span></p>
+                <p class="big" id="fit-val">0%</p>
+                <div class="meter"><i id="fit-bar" style="width:0"></i></div>
+                <p class="hint"><span class="en">A model-based match with the Business Analyst profile. It is not a promise about a job.</span><span class="vi">Chỉ số phù hợp theo mô hình với hồ sơ Business Analyst, không phải cam kết về công việc.</span></p>
+              </div>
+              <div class="next">
+                <p class="k"><span class="en">Learn next</span><span class="vi">Nên học tiếp</span></p>
+                <p class="big" id="next-name">SQL</p>
+                <p class="why" id="next-why"></p>
+              </div>
+              <ol class="rank" id="rank" aria-label="Priority ranking"></ol>
+            </div>
+          </div>
+          <p class="formula"><span class="en">Priority = 0.30 × gap + 0.30 × importance + 0.20 × demand + 0.20 × strategic value, each on a 0–100 scale. A skill whose prerequisite is not yet met is never recommended first.</span><span class="vi">Điểm ưu tiên = 0,30 × thiếu hụt + 0,30 × tầm quan trọng + 0,20 × nhu cầu + 0,20 × giá trị chiến lược, mỗi thành phần trên thang 0–100. Kỹ năng chưa đủ điều kiện tiên quyết sẽ không được gợi ý trước.</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="sec" id="skills" aria-labelledby="h-skills">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-skills"><span class="en">Skills</span><span class="vi">Kỹ năng</span></h2><span class="gloss"><span class="en">Skills</span><span class="vi">Kỹ năng</span></span></div>
+      <div class="skills">
+        <div>
+          <h3><span class="en">Analysis</span><span class="vi">Phân tích</span></h3>
+          <ul>
+            <li><span class="en">Quantitative analysis in STATA</span><span class="vi">Chạy lượng bằng STATA</span></li>
+            <li>Microsoft Word, Excel, Access</li>
+            <li>SQL, Power BI<small><span class="en">Currently learning</span><span class="vi">Đang học</span></small></li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="en">Language</span><span class="vi">Ngôn ngữ</span></h3>
+          <ul>
+            <li><span class="en">Interpretation and translation</span><span class="vi">Phiên dịch</span></li>
+            <li><span class="en">Content writing</span><span class="vi">Viết content</span></li>
+            <li>IELTS 7.5 (2022)</li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="en">Communication</span><span class="vi">Giao tiếp</span></h3>
+          <ul>
+            <li><span class="en">Presentation and public speaking</span><span class="vi">Thuyết trình, hoạt ngôn</span></li>
+            <li><span class="en">Event organization</span><span class="vi">Tổ chức sự kiện</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section class="sec" id="awards" aria-labelledby="h-rec">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-rec"><span class="en">Awards and certificates</span><span class="vi">Giải thưởng và chứng chỉ</span></h2><span class="gloss"><span class="en">Awards and certificates</span><span class="vi">Giải thưởng và chứng chỉ</span></span></div>
+      <div class="entries">
+        <div class="entry"><div class="years">2022</div><div><h4>IELTS 7.5</h4></div></div>
+        <div class="entry"><div class="years">2020</div><div><h4><span class="en">First prize, provincial scientific research contest, Thái Bình</span><span class="vi">Giải nhất cấp tỉnh cuộc thi nghiên cứu khoa học tỉnh Thái Bình</span></h4></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="sec contact" id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></h2><span class="gloss"><span class="en">Contact</span><span class="vi">Liên hệ</span></span></div>
+      <div>
+        <p><span class="en">The quickest way to reach me is email. I read and reply in English and Vietnamese.</span><span class="vi">Cách nhanh nhất để liên lạc với mình là email. Mình đọc và trả lời bằng tiếng Việt và tiếng Anh.</span></p>
+        <a class="mail" id="mail-text" href="mailto:phamconghieu019@gmail.com">phamconghieu019@gmail.com</a>
+        <div class="contact-row">
+          <button class="copy" type="button" id="copy-mail" data-copy="phamconghieu019@gmail.com"><span class="lab"><span class="en">Copy email</span><span class="vi">Sao chép email</span></span><span class="ok" role="status"><span class="en">Copied</span><span class="vi">Đã sao chép</span></span></button>
+          <a href="https://www.facebook.com/hieu.phamcong.96" rel="noopener" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hiếu Phạm Công</span>
+    <a href="#top-of-page" id="to-top"><span class="en">Back to top</span><span class="vi">Lên đầu trang</span></a>
+    <span><span class="en">Hà Nội, Vietnam</span><span class="vi">Hà Nội, Việt Nam</span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, KEY="portfolio-lang";
+  function read(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function save(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function setLang(lang,animate){
+    if(lang!=="en"&&lang!=="vi")lang="en";
+    root.setAttribute("data-lang",lang); root.setAttribute("lang",lang);
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.set===lang))});
+    if(animate){root.classList.remove("swap");void root.offsetWidth;root.classList.add("swap")}
+  }
+  setLang(read()||((navigator.language||"").toLowerCase().indexOf("vi")===0?"vi":"en"),false);
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click",function(){setLang(b.dataset.set,true);save(b.dataset.set)});
+  });
+
+  /* ---- copy email ---- */
+  var copyBtn=document.getElementById("copy-mail");
+  if(copyBtn){copyBtn.addEventListener("click",function(){
+    function done(){copyBtn.classList.add("is-done");setTimeout(function(){copyBtn.classList.remove("is-done")},1800)}
+    function pick(){var el=document.getElementById("mail-text");var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(copyBtn.getAttribute("data-copy")).then(done,pick)}else{pick()}
+  })}
+
+  /* ---- back to top ---- */
+  var top=document.getElementById("to-top");
+  if(top){top.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})})}
+
+  /* ---- scroll progress + current section in the bar ---- */
+  var prog=document.querySelector(".progress"), ticking=false;
+  function onScroll(){
+    if(ticking)return; ticking=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      prog.style.setProperty("--p",h>0?Math.min(1,Math.max(0,window.scrollY/h)).toFixed(4):0);
+      ticking=false;
+    });
+  }
+  window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+  var links={}; document.querySelectorAll(".bar nav a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var id=e.target.id; var key=links[id]?id:(id==="awards"?"skills":null);
+        if(!key)return;
+        Object.keys(links).forEach(function(k){links[k].removeAttribute("aria-current")});
+        links[key].setAttribute("aria-current","true");
+      });
+    },{rootMargin:"-40% 0px -55% 0px"});
+    document.querySelectorAll("main .sec").forEach(function(s){io.observe(s)});
+  }
+
+  /* ---- "now" marker on the timeline (2020 to 2027) ---- */
+  var tl=document.getElementById("tl");
+  if(tl){
+    var d=new Date(), pos=((d.getFullYear()-2020)+d.getMonth()/12)/8;
+    if(pos>0&&pos<1){
+      var n=document.createElement("div"); n.className="now"; n.style.left=(pos*100).toFixed(2)+"%";
+      n.innerHTML='<span><span class="en">Now</span><span class="vi">Hiện tại</span></span>';
+      n.style.top="24px"; tl.appendChild(n);
+    }
+  }
+
+  /* ---- PathWise scoring demo: the same formulas as the project report ---- */
+  var SK=[
+    {id:"sql",en:"SQL",vi:"SQL",req:3,imp:95,dem:90,str:85,pre:null},
+    {id:"pbi",en:"Power BI",vi:"Power BI",req:3,imp:80,dem:85,str:70,pre:"sql"},
+    {id:"stat",en:"Statistics",vi:"Thống kê",req:3,imp:75,dem:80,str:50,pre:null},
+    {id:"excel",en:"Excel",vi:"Excel",req:4,imp:90,dem:75,str:40,pre:null},
+    {id:"comm",en:"Communication",vi:"Giao tiếp",req:4,imp:85,dem:60,str:30,pre:null}
+  ];
+  var DEF={sql:1,pbi:1,stat:3,excel:4,comm:4};
+  var byId={}; SK.forEach(function(s){byId[s.id]=s});
+  function B(en,vi){return '<span class="en">'+en+'</span><span class="vi">'+vi+'</span>'}
+  var host=document.getElementById("skill-inputs");
+  if(!host)return;
+  host.innerHTML=SK.map(function(s){
+    var radios=[1,2,3,4,5].map(function(n){
+      return '<label'+(n===s.req?' class="req"':'')+'><input type="radio" name="lv-'+s.id+'" value="'+n+'"'+(DEF[s.id]===n?' checked':'')+' aria-label="'+s.en+', level '+n+'"><span>'+n+'</span></label>';
+    }).join("");
+    return '<fieldset class="skill"><legend>'+B(s.en,s.vi)+'</legend><span class="need">'+B('Needs level '+s.req,'Cần mức '+s.req)+'</span><div class="seg">'+radios+'</div></fieldset>';
+  }).join("");
+
+  function level(id){var c=host.querySelector('input[name="lv-'+id+'"]:checked');return c?+c.value:1}
+  function render(){
+    var cur={}; SK.forEach(function(s){cur[s.id]=level(s.id)});
+    var num=0, den=0, cand=[], done=[];
+    SK.forEach(function(s){
+      var match=Math.min(cur[s.id]/s.req,1)*100; num+=match*s.imp; den+=s.imp;
+      var gap=Math.max(s.req-cur[s.id],0);
+      if(gap>0){
+        var G=gap/4*100, P=0.30*G+0.30*s.imp+0.20*s.dem+0.20*s.str;
+        var blocked=s.pre&&cur[s.pre]<byId[s.pre].req;
+        cand.push({s:s,gap:gap,P:P,blocked:blocked});
+      } else done.push(s);
+    });
+    var fit=num/den;
+    document.getElementById("fit-val").textContent=fit.toFixed(1)+"%";
+    document.getElementById("fit-bar").style.width=fit.toFixed(1)+"%";
+    cand.sort(function(a,b){return b.P-a.P});
+    var pick=null; for(var i=0;i<cand.length;i++){if(!cand[i].blocked){pick=cand[i];break}}
+    var nn=document.getElementById("next-name"), nw=document.getElementById("next-why");
+    if(pick){
+      var s=pick.s, dep=SK.filter(function(x){return x.pre===s.id&&Math.max(x.req-cur[x.id],0)>0})[0];
+      nn.innerHTML=B(s.en,s.vi);
+      nw.innerHTML=B('Gap '+pick.gap+' of 4, importance '+s.imp+', demand '+s.dem+', strategic value '+s.str+'.'+(dep?' '+dep.en+' needs it first.':''),
+                     'Thiếu '+pick.gap+'/4 bậc, tầm quan trọng '+s.imp+', nhu cầu '+s.dem+', giá trị chiến lược '+s.str+'.'+(dep?' '+dep.vi+' cần kỹ năng này trước.':''));
+    } else {
+      nn.innerHTML=B('Nothing missing','Không còn thiếu');
+      nw.innerHTML=B('Every skill meets the level this career needs.','Mọi kỹ năng đã đạt mức nghề yêu cầu.');
+    }
+    var html=cand.map(function(c){
+      var first=(pick&&c.s===pick.s);
+      var tag=first?'<span class="tag go">'+B('Learn next','Nên học tiếp')+'</span>'
+        :(c.blocked?'<span class="tag">'+B('Needs '+byId[c.s.pre].en+' first','Cần '+byId[c.s.pre].vi+' trước')+'</span>'
+        :'<span class="tag">'+B('Later','Sau đó')+'</span>');
+      return '<li class="'+(first?'first':'')+'"><span class="nm">'+B(c.s.en,c.s.vi)+'</span><span class="sc">'+c.P.toFixed(1)+'</span><span class="pb"><i style="width:'+c.P.toFixed(1)+'%"></i></span>'+tag+'</li>';
+    }).join("");
+    html+=done.map(function(s){
+      return '<li class="done"><span class="nm">'+B(s.en,s.vi)+'</span><span class="sc">&ndash;</span><span class="tag ok">'+B('Meets requirement','Đã đạt yêu cầu')+'</span></li>';
+    }).join("");
+    document.getElementById("rank").innerHTML=html;
+  }
+  host.addEventListener("change",render);
+  document.getElementById("reset-demo").addEventListener("click",function(){
+    SK.forEach(function(s){var r=host.querySelector('input[name="lv-'+s.id+'"][value="'+DEF[s.id]+'"]'); if(r)r.checked=true});
+    render();
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
